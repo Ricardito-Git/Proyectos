@@ -1,0 +1,21 @@
+<div class="contenedor">
+
+  <h2>Calculadora de Propinas</h2>
+
+  <label>Monto de la cuenta:</label>
+  <input type="number" [(ngModel)]="cuenta">
+
+  <br><br>
+
+  <label>Porcentaje: {{ porcentaje }}%</label>
+  <input type="range"
+         min="0"
+         max="100"
+         [(ngModel)]="porcentaje">
+
+  <br><br>
+
+  <h3>Propina: ${{ propina.toFixed(2) }}</h3>
+  <h3>Total: ${{ total.toFixed(2) }}</h3>
+
+</div>

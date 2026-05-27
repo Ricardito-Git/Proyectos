@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "postgresql"
+  url = env("postgresql://postgres:12345@localhost:5432/logindatabase?schema=public")
+}
+
+model login {
+  login_id Int      @id @default(autoincrement())
+  username String   @unique @db.VarChar(50)
+  passwor  String
+  userid   Int
+  usuarios usuarios @relation(fields: [userid], references: [userid], onDelete: Cascade, onUpdate: NoAction, map: "fk_usuario")
+}
+
+model usuarios {
+  userid Int       @id
+  nom    String?   @db.VarChar(100)
+  edad   Int?
+  correo String?   @unique @db.VarChar(100)
+  fechar DateTime? @default(now()) @db.Timestamp(6)
+  login  login[]
+}

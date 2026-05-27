@@ -1,0 +1,32 @@
+<div class="container">
+    <h2>Lista de Compras</h2>
+    <table class="stiled-lista">
+        <thead>
+            <tr>
+                <try>
+                <th>Producto</th>
+                <th>Cantidad</th>
+            </try>
+            </tr>
+            
+        </thead>
+        <tbody>
+            <tr**ngFor="let item of list">
+                <td>{{it.producto }}</td>
+                <td> {{it.cantidad}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ng-teplate @listaVacia>
+        <div class="mensaje-vacio">
+            <p>No hay productos en la lista</p>
+        </div>
+    </ng-teplate>
+
+    <br>
+    <button routerLink="/" class="btn-regresar">
+        Volver al formulario
+    </button>
+</div>
+ 

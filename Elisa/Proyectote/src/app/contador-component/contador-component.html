@@ -1,0 +1,7 @@
+<p>contador works!</p>
+<div class="container">
+    <h2>contador:{{numero}}</h2>
+
+    <button (click)="incrementar()">incrementar</button>
+    <button (click)="decrementar()"[disabled]="numero==0">reducir</button>
+</div>

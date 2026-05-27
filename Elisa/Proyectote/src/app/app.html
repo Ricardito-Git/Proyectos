@@ -1,0 +1,17 @@
+<h2>{{ numero }}</h2>
+
+<button (click)="sumar()">+1</button>
+<button (click)="numero =0">Reset</button>
+<button (click)="restar()">-1</button>
+
+<h2>{{titulo}}</h2>
+
+<h2>{{misCompras}}</h2>
+<p *ngIf="carritoVacio">Tu carrito está vacío</p>
+<ul>
+    <i *ngFor="let articulo of misCompras">
+        {{articulo}}
+    </i>
+</ul>
+<hr> <app-ingresa-valor></app-ingresa-valor>
+<hr> <app-contador-component></app-contador-component>
